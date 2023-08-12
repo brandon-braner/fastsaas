@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "singlepane-be"
+version = "0.1.0"
+description = "Python backend api for singlepane.app"
+authors = ["Brandon Braner <brandon.braner@gmail.com>"]
+readme = "README.md"
+packages = [{ include = "singlepane_be" }]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = { extras = ["all/"], version = "^0.101.0" }
+supabase-py = "^0.0.2"
+ruff = "^0.0.284"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^6.2.5"
+black = "^23.7.0"
+
+[tool.ruff]
+line-length = 140
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
