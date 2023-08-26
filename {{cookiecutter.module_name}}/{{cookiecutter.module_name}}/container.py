@@ -1,9 +1,9 @@
 from lagom import Container
 from lagom.integrations.fast_api import FastApiIntegration
 
-from singlepane_api.config.settings import Settings, get_settings
-from singlepane_api.providers.supabase_provider import register as supabase_register
-from singlepane_api.providers.settings_provider import register as settings_register
+from .config.settings import Settings, get_settings
+from .providers.supabase_provider import register as supabase_register
+from .providers.settings_provider import register as settings_register
 
 
 di: Container = Container()

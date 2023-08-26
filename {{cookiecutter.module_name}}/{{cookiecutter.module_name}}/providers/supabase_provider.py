@@ -1,5 +1,5 @@
 from supabase_py import create_client, Client as SupabaseClient
-from singlepane_api.config.settings import Settings
+from {{ cookiecutter.module_name }}.config.settings import Settings
 from lagom import Container, Singleton
 
 

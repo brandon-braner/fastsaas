@@ -1,7 +1,5 @@
 from fastapi import FastAPI
-import singlepane_api.container as container
-
-from singlepane_api.modules.okr.routes import router as okr_router
+import {{ cookiecutter.module_name }}.container as container
 
 
 def bootstrap_app() -> FastAPI:
@@ -14,7 +12,10 @@ def bootstrap_app() -> FastAPI:
 
 def bootstrap_routes(app: FastAPI) -> None:
     """Bootstraps the FastAPI routes."""
-    app.include_router(okr_router, prefix="/okr", tags=["okr"])
+    import {{cookiecutter.module_name}}.modules as modules
+
+    app.include_router(modules.web_router, tags=["web"], include_in_schema=False)
+    app.include_router(modules.api_router, prefix="/api")
 
 
 app = bootstrap_app()

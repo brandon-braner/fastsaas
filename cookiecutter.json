@@ -1,0 +1,8 @@
+{
+  "module_name": "fastsaas_project",
+  "project_name": "FastSaaS Project",
+  "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
+  "description": "An Awesome FastSaaS Project",
+  "author": "Anonymous",
+  "email": "anonymous@example.com"
+}

@@ -13,9 +13,8 @@ if env_file:
 
 
 class Settings(BaseSettings):
-    app_name: str = "Single Pane"
+    app_name: str = "{{cookiecutter.project_name}}"
     app_secret_key: str = env.get("APP_SECRET_KEY", "super-secret")
-    dev_mode: str | bool = env.get("DEV_MODE")
 
     supabase_url: str = env.get("SUPABASE_URL")
     supabase_key: str = env.get("SUPABASE_KEY")
